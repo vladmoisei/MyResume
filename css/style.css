@@ -1,0 +1,63 @@
+.cell {
+	border: 1px solid black;
+}
+
+body {
+}
+.container {
+	background-color: #f1f1f1;
+	max-width: 100%;
+	display: flex;
+	margin: 40px;
+}
+
+aside {
+	background-color: #62ad8a;
+	width: 30%;
+	margin: 10px;
+	padding: 5px;
+}
+
+main {
+	width: 70%;
+	margin: 10px 10px 10px 0;
+}
+
+.about__me {
+	background-color: #535954;
+	text-align: center;
+	color: white;
+}
+
+.about__me h1 {
+	padding-top: 20px;
+	font-size: 3em;
+}
+
+.about__me p {
+	text-align: left;
+	line-height: 1.5;
+	margin: 0 50px;
+	padding-bottom: 20px;
+}
+
+.contact {
+	display: flex;
+	max-width: 100%;
+}
+
+.contact__list {
+	width: 50%
+}
+
+.contact a {
+	text-decoration: none;
+}
+
+.contact ul {
+	list-style-type: none;
+}
+
+.contact img {
+	max-height: 20px;
+}
