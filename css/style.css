@@ -52,6 +52,11 @@ main {
 
 .contact a {
 	text-decoration: none;
+	color: #185878;
+}
+
+.contact a:hover {
+	color: #6cc180;
 }
 
 .contact ul {
@@ -63,6 +68,67 @@ main {
 	max-height: 20px;
 }
 
+.contact__list li {
+	height: 20px;
+}
 .contact a:hover img {
 	transform: scale(1.2);
+}
+
+.line__behind {
+  	text-align: center;
+}
+
+.line__behind span {
+	background: #f1f1f1;
+	padding: 0 20px;
+  	text-align: center;
+}
+
+.line__behind+* {
+	margin-left: 5%;
+	width: 90%;
+  	border-top: solid 2px #adac97;
+  	margin-top: -45px;
+}
+
+.education {
+	text-align: center;
+}
+
+.education ul {
+	list-style-type: none;
+	width: 50%;
+	margin-left: 25%;
+	line-height: 1.5;
+	/*text-align: left;*/
+}
+.education__title {
+	margin-left: 30px;
+}
+
+.education__study {
+	margin-left: 20px;
+}
+
+.education__study a {
+	text-decoration: none;
+	color: #185878;
+}
+
+.education__study a:hover {
+	color: #6cc180;
+}
+
+.education li {
+	text-align: left;
+}
+
+.education__second__row {
+	margin-left: 56px;
+}
+
+.experiences {
+	width: 90%;
+	margin-left: 5%;
 }
