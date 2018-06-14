@@ -71,6 +71,11 @@ main {
 .contact__list li {
 	height: 20px;
 }
+
+.list__doi {
+	margin-top: 5px;
+}
+
 .contact a:hover img {
 	transform: scale(1.2);
 }
@@ -128,7 +133,35 @@ main {
 	margin-left: 56px;
 }
 
+.education__container {
+	width: 100%;
+	display: flex;
+}
+
+.education__date {
+	width: 20%;
+}
+
+.education__text {
+	width: 80%;
+}
+
 .experiences {
 	width: 90%;
 	margin-left: 5%;
+	text-align: center;
+}
+
+.work__container {
+	width: 100%;
+	display: flex;
+}
+
+.work__date {
+	width: 20%;
+	margin-right: 20px;
+}
+
+.work__experience {
+
 }
