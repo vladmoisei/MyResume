@@ -134,8 +134,9 @@ main {
 }
 
 .education__container {
-	width: 100%;
+	width: 50%;
 	display: flex;
+	margin-left: 25%;
 }
 
 .education__date {
@@ -144,6 +145,18 @@ main {
 
 .education__text {
 	width: 80%;
+	text-align: left;
+	margin-top: 0;
+	padding-top: 0;
+}
+
+.education__text a {
+	text-decoration: none;
+	color: #185878;
+}
+
+.education__text a:hover {
+	color: #6cc180;
 }
 
 .experiences {
