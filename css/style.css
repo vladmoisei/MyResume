@@ -207,3 +207,41 @@ main {
 	border-radius: 50%;
 	border:10px solid white;
 }
+
+.name__title, .skills__title {
+	text-align: center;
+}
+
+.skills__title {
+	margin-top: 40px;
+}
+
+.dot {
+	margin-left: 10px;
+  	margin-top: 5px;
+  	height: 25px;
+  	width: 25px;
+  	background-color: #bbb;
+  	border-radius: 50%;
+  	display: inline-block;
+}
+
+.black {
+	background-color: black;
+}
+
+.important__skills {
+	text-align: center;
+}
+
+.skill__name {
+	text-transform: uppercase;
+}
+
+.skills__word {
+	width: 100%;
+}
+
+.skills__word img {
+	width: 100%;
+}
