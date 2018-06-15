@@ -30,6 +30,7 @@ main {
 	background-color: #535954;
 	text-align: center;
 	color: white;
+	font-family: 'Work Sans', sans-serif;
 }
 
 .about__me h1 {
@@ -67,20 +68,45 @@ main {
 }
 
 .contact img {
-	width: 20px;
+	/*width: 20px;*/
 	max-height: 20px;
 }
 
 .contact__list li {
 	height: 20px;
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 18px;
 }
 
 .list__doi {
-	margin-top: 5px;
+	/*margin-top: 5px;*/
 }
 
-.contact a:hover img {
+/*.contact a:hover img {
 	transform: scale(1.2);
+}*/
+
+.fa-facebook-f {
+	margin-right: 8px;
+}
+
+.fa-linkedin-in {
+	margin-right: 4px;
+}
+
+.contact a:hover .fa-facebook-f {
+	transform: scale(1.2);
+	margin-right: 10px;
+}
+
+.contact a:hover .fa-linkedin-in {
+	transform: scale(1.2);
+	margin-right: 6px;
+}
+
+.contact a:hover .fa-github {
+	transform: scale(1.2);
+	margin-right: 2px;
 }
 
 .line__behind {
@@ -113,6 +139,8 @@ main {
 }
 .education__title {
 	margin-left: 30px;
+	/*font-family: 'Hind Madurai', sans-serif;*/
+	font-family: 'Volkhov', serif;
 }
 
 /*.education__study {
@@ -141,6 +169,9 @@ main {
 	display: flex;
 	margin-left: 25%;
 	line-height: 1.5;
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 18px;
+	font-weight: 500;
 }
 
 .education__date {
@@ -173,6 +204,13 @@ main {
 	width: 100%;
 	display: flex;
 	line-height: 1.5;
+	font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+}
+
+.experience__p {
+/*	font-family: 'Lateef';
+	font-size: 22px;*/
 }
 
 .work__date {
@@ -198,6 +236,10 @@ main {
 
 /*Aside section*/
 
+.menu__aside {
+	font-family: Hind, sans-serif;
+}
+
 .avatar {
 	width: 100%;
 }
@@ -210,6 +252,11 @@ main {
 
 .name__title, .skills__title, .language__title {
 	text-align: center;
+	font-family: 'Volkhov', serif;
+}
+
+.name__title {
+
 }
 
 .skills__title {
