@@ -1,4 +1,4 @@
-// Add points to importan skills
+// Add points to important skills
 var skillEvaluation = document.getElementsByClassName("skill__evaluation");
 console.log(skillEvaluation);
 for (let elem of skillEvaluation) {

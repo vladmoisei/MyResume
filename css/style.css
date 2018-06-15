@@ -208,7 +208,7 @@ main {
 	border:10px solid white;
 }
 
-.name__title, .skills__title {
+.name__title, .skills__title, .language__title {
 	text-align: center;
 }
 
@@ -244,4 +244,10 @@ main {
 
 .skills__word img {
 	width: 100%;
+}
+
+.language table {
+	width: 50%;
+	margin-left: 25%;
+	text-align: center;
 }
