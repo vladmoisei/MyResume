@@ -18,6 +18,9 @@ aside {
 	padding: 5px;
 }
 
+
+/*main section*/
+
 main {
 	width: 70%;
 	margin: 10px 10px 10px 0;
@@ -191,4 +194,16 @@ main {
 
 .work__experience a:hover {
 	color: #6cc180;
+}
+
+/*Aside section*/
+
+.avatar {
+	width: 100%;
+}
+.avatar img {
+	margin-left: 20%;
+	max-width: 60%;
+	border-radius: 50%;
+	border:10px solid white;
 }
