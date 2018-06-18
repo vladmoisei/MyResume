@@ -250,13 +250,16 @@ main {
 	border:10px solid white;
 }
 
-.name__title, .skills__title, .language__title {
+.name__title, .skills__title, .language__title, .more__title {
 	text-align: center;
 	font-family: 'Volkhov', serif;
 }
 
 .name__title {
-
+	font-family: 'Dancing Script', cursive;
+	/*font-family: 'Satisfy', cursive;*/
+	/*font-family: 'Cookie', cursive;*/
+	font-size: 40px;
 }
 
 .skills__title {
@@ -297,4 +300,17 @@ main {
 	width: 50%;
 	margin-left: 25%;
 	text-align: center;
+}
+
+.more {
+	text-align: center;
+}
+
+.more a {
+	text-decoration: none;
+	color: #185878;
+}
+
+.more a:hover {
+	color: #6cc180;
 }
