@@ -315,3 +315,52 @@ main {
 .more a:hover {
 	color: #6cc180;
 }
+
+/*Page 2*/
+
+#courses {
+	border-top: 1px solid rgba(0,0,0,.15);
+    border-bottom: 1px solid rgba(0,0,0,.15);
+    background-color: #f3f6f8;
+}
+
+.long__list {
+	list-style-type: none;
+}
+
+#courses h3 {
+	color: #0084bf;
+	line-height: 20px;
+    font-weight: 600;
+    padding: 20px 0 0 10px;
+}
+
+.nr__courses {
+	font-size: 24px;
+}
+
+.fa-chevron-up, .fa-chevron-down {
+	padding-right: 40px;
+	float: right;
+}
+
+.fa-chevron-down:hover {
+	cursor: pointer;
+}
+
+.courses__list .short__list {
+	display: inline;
+}
+
+.bullet {
+	margin: 2px 5px 2px 5px;
+  	height: 5px;
+  	width: 5px;
+  	background-color: black;
+  	border-radius: 50%;
+  	display: inline-block;
+}
+
+.proba {
+	animation: opac 0.8s;
+}
