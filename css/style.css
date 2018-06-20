@@ -362,6 +362,8 @@ main {
 	min-height: 50px;
 	vertical-align: middle;
 	padding-top: 25px;
+	font-size: 16px;
+	font-weight: 600;
 }
 
 .bottom__line {
@@ -417,4 +419,41 @@ main {
 
 #arrow__button__cert:hover {
 	cursor: pointer;
+}
+
+.certification__list__short {
+/*	display: inline;*/
+	list-style-type: none;
+}
+
+.certification__list_long {
+	display: block;
+	list-style-type: circle;
+}
+
+.certification__list__elem img {
+	max-width: 80px;
+	margin-right: 20px;
+}
+
+.certification__list__elem a:hover img {
+	transform: scale(1.2);
+}
+
+.certification__list__elem a {
+	text-decoration: none;
+	color: #185878;
+}
+
+.certification__list__elem a:hover {
+	color: #6cc180;
+}
+
+.cisco__logo {
+	vertical-align: middle;
+	padding-bottom: 10px;
+}
+
+.hide {
+	display: none;
 }

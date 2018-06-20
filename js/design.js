@@ -126,10 +126,14 @@ arrowBtn.addEventListener('click', arrowClick);
 
 	for (let elem of coursesListElem) {
 		// elem.addClass('animated bounceOutLeft');
-		elem.classList.add("animated");
-		elem.classList.add("fadeIn");
+		elem.classList.add("animated", "fadeIn");
 		setTimeout(function() { removeFadeIn(); }, 1100);
 	}
 
 })();
+
+/*Logic for certification section long and short version
+ *
+ *
+ */
 
