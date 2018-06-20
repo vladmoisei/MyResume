@@ -318,7 +318,13 @@ main {
 
 /*Page 2*/
 
+/*Courses section*/
+
 #courses {
+    line-height: 24px;
+}
+
+.long__list__courses {
 	border-top: 1px solid rgba(0,0,0,.15);
     border-bottom: 1px solid rgba(0,0,0,.15);
     background-color: #f3f6f8;
@@ -330,7 +336,7 @@ main {
 
 #courses h3 {
 	color: #0084bf;
-	line-height: 20px;
+	line-height: 1.5;
     font-weight: 600;
     padding: 20px 0 0 10px;
 }
@@ -344,7 +350,7 @@ main {
 	float: right;
 }
 
-.fa-chevron-down:hover {
+#arrow__button:hover {
 	cursor: pointer;
 }
 
@@ -352,6 +358,17 @@ main {
 	display: inline;
 }
 
+.long__list__elem {
+	min-height: 50px;
+	vertical-align: middle;
+	padding-top: 25px;
+}
+
+.bottom__line {
+	border-bottom: solid;
+	border-width: 1px;
+	border-color: rgba(0,0,0,.15);
+}
 .bullet {
 	margin: 2px 5px 2px 5px;
   	height: 5px;
@@ -361,6 +378,43 @@ main {
   	display: inline-block;
 }
 
-.proba {
-	animation: opac 0.8s;
+.end__points {
+	-webkit-line-clamp:3;
+	max-height: 70px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+
+/*Certification section*/
+
+#certification {
+    line-height: 24px;
+}
+
+.long__list__certification {
+	border-top: 1px solid rgba(0,0,0,.15);
+    border-bottom: 1px solid rgba(0,0,0,.15);
+    background-color: #f3f6f8;
+}
+
+#certification h3 {
+	color: #0084bf;
+	line-height: 1.5;
+    font-weight: 600;
+    padding: 20px 0 0 10px;
+}
+
+.nr__certification {
+	font-size: 24px;
+}
+
+/*.fa-chevron-up, .fa-chevron-down {
+	padding-right: 40px;
+	float: right;
+}*/
+
+#arrow__button__cert:hover {
+	cursor: pointer;
 }
