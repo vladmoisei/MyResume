@@ -33,30 +33,32 @@ function listVerticalDisplay() {
 		elem.classList.remove("short__list");
 		elem.classList.add("long__list__elem", "bottom__line");
 	}
-	//remove bootom line to the las element
+	// remove bootom line to the las element
 	coursesListElem[coursesListElem.length-1].classList.remove("bottom__line");
-	//remove 3 points for short version list
+	// remove 3 points for short version list
 	coursesList.classList.remove("end__points");
 }
 
 function putArrowUp() {
-	//var arrowBtn = document.getElementsByClassName("fa-chevron-down")[0];
+	// var arrowBtn = document.getElementsByClassName("fa-chevron-down")[0];
 	arrowBtn.classList.remove("fa-chevron-down");
 	arrowBtn.classList.add("fa-chevron-up");
 }
 
 function removeFadeIn() {
+	// courses section
 	for (let elem of coursesListElem) {
 		// elem.addClass('animated bounceOutLeft');
-		//elem.classList.add("animated");
+		// elem.classList.add("animated");
 		elem.classList.remove("fadeIn");
 	}
+
 }
 
 function addFadeIn() {
 	for (let elem of coursesListElem) {
 		// elem.addClass('animated bounceOutLeft');
-		//elem.classList.add("animated");
+		// elem.classList.add("animated");
 		elem.classList.add("fadeIn");
 	}
 }
@@ -70,7 +72,7 @@ function arrowDownClick() {
 	removeBulletPoints();
 	listVerticalDisplay();
 	putArrowUp();
-	//removeFadeIn();
+	// removeFadeIn();
 	addFadeIn();
 	addCoursesBackGround();
 }
@@ -81,7 +83,7 @@ function addBulletPoints() {
 	for (let i = 0; i < bulletPointsList.length; i++) {
 		bulletPointsList[i].classList.add("bullet");
 	}
-	//coursesList.classList.remove("long__list");
+	// coursesList.classList.remove("long__list");
 }
 
 function listHorizontalDisplay() {
@@ -90,8 +92,8 @@ function listHorizontalDisplay() {
 		elem.classList.remove("long__list__elem", "bottom__line");
 	}
 	coursesList.classList.add("end__points");
-	//remove bootom line to the las element
-	//coursesListElem[coursesListElem.length-1].classList.add("bottom__line");
+	// remove bootom line to the las element
+	// coursesListElem[coursesListElem.length-1].classList.add("bottom__line");
 }
 
 function putArrowDown() {
@@ -111,7 +113,7 @@ function arrowUpClick() {
 	addFadeIn();
 	removeCoursesBackGround();
 }
-//Create event listener for extending list of courses
+// Create event listener for extending list of courses
 function arrowClick() {
 	if (arrowBtn.classList.contains("fa-chevron-down"))
 		arrowDownClick();
@@ -122,18 +124,108 @@ function arrowClick() {
 
 arrowBtn.addEventListener('click', arrowClick);
 
-(function addAnimatedFadeIn() {
-
-	for (let elem of coursesListElem) {
-		// elem.addClass('animated bounceOutLeft');
-		elem.classList.add("animated", "fadeIn");
-		setTimeout(function() { removeFadeIn(); }, 1100);
-	}
-
-})();
-
 /*Logic for certification section long and short version
  *
  *
  */
+var certificationSection = document.getElementById("certification");
+var certificationListElem = document.getElementById("certification__list").children
+var arrowBtnCertification = document.getElementById("arrow__button__cert");
+var ciscoImgLink = document.getElementById("cisco__img__link");
+
+function removeFadeInCert () {
+		// certification section
+	for (let elem of certificationListElem) {
+		elem.classList.remove("fadeIn");
+	}
+}
+
+function putArrowUpCert() {
+	// var arrowBtn = document.getElementsByClassName("fa-chevron-down")[0];
+	arrowBtnCertification.classList.remove("fa-chevron-down");
+	arrowBtnCertification.classList.add("fa-chevron-up");
+}
+
+function addCertificationBackGround() {
+	certificationSection.classList.add("long__list__courses");
+	for (let elem of certificationListElem) {
+		elem.classList.add("long__list__elem");
+	}
+}
+
+function addFadeInCert() {
+	for (let elem of certificationListElem) {
+		// elem.addClass('animated bounceOutLeft');
+		// elem.classList.add("animated");
+		elem.classList.add("fadeIn");
+	}
+}
+
+function addCiscoImgLink() {
+	ciscoImgLink.classList.remove("hide");
+}
+
+function certificationArrowDownClick() {
+	// removeBulletPoints();
+    // listVerticalDisplay();
+	putArrowUpCert();
+	// removeFadeIn();
+	addFadeInCert();
+	addCertificationBackGround();
+	addCiscoImgLink();
+}
+
+function putArrowDownCert() {
+	arrowBtnCertification.classList.remove("fa-chevron-up");
+	arrowBtnCertification.classList.add("fa-chevron-down");
+}
+
+function removeCertificationBackGround() {
+	certificationSection.classList.remove("long__list__courses");
+	for (let elem of certificationListElem) {
+		elem.classList.remove("long__list__elem");
+	}
+}
+
+function hideCiscoImgLink() {
+	ciscoImgLink.classList.add("hide");
+}
+
+function certificationArrowUpClick() {
+	// addBulletPoints();
+	// listHorizontalDisplay();
+	putArrowDownCert();
+	addFadeInCert();
+	removeCertificationBackGround();
+	hideCiscoImgLink();
+}
+
+
+function certificationArrowClick () {
+	if (arrowBtnCertification.classList.contains("fa-chevron-down"))
+		certificationArrowDownClick();
+	else if (arrowBtnCertification.classList.contains("fa-chevron-up"))
+		certificationArrowUpClick();
+	setTimeout(function() { removeFadeInCert(); }, 1100);
+}
+
+arrowBtnCertification.addEventListener('click', certificationArrowClick);
+
+//Function for adding fadeIn to text
+(function addAnimatedFadeIn() {
+	// Courses section
+	for (let elem of coursesListElem) {
+		// elem.addClass('animated bounceOutLeft');
+		elem.classList.add("animated", "fadeIn");
+		setTimeout(function() { removeFadeIn(); }, 1100);
+	};
+	// Certification section
+	for (let element of certificationListElem) {
+		// console.log(certificationListElem);
+		// elem.addClass('animated bounceOutLeft');
+		 element.classList.add("animated", "fadeIn");
+		 setTimeout(function() { removeFadeInCert(); }, 1100);
+	};
+})();
+
 

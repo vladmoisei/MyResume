@@ -432,7 +432,9 @@ main {
 }
 
 .certification__list__elem img {
-	max-width: 80px;
+	/*max-width: 60px;*/
+	max-height: 30px;
+	margin-top: 10px;
 	margin-right: 20px;
 }
 
@@ -450,8 +452,15 @@ main {
 }
 
 .cisco__logo {
-	vertical-align: middle;
+/*	vertical-align: text-bottom;
 	padding-bottom: 10px;
+	margin-bottom: 20px;
+	font-size: 30px;
+*/
+	vertical-align: baseline;
+    font-size: 20px;
+    height: 30px;
+    /*color: rgba(0,0,0,.6);*/
 }
 
 .hide {
