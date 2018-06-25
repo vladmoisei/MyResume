@@ -371,6 +371,7 @@ main {
 	border-width: 1px;
 	border-color: rgba(0,0,0,.15);
 }
+
 .bullet {
 	margin: 2px 5px 2px 5px;
   	height: 5px;
@@ -465,4 +466,52 @@ main {
 
 .hide {
 	display: none;
+}
+
+/*Automation project section*/
+
+/*Programming project section*/
+
+#programming {
+    line-height: 24px;
+}
+
+#programming h3 {
+	color: #0084bf;
+	line-height: 1.5;
+    font-weight: 600;
+    padding: 20px 0 0 10px;
+}
+
+.nr__programming {
+	font-size: 24px;
+}
+
+#programming__list .short__list {
+	display: inline;
+}
+
+.long__list__programming {
+	display: block;
+	border-top: 1px solid rgba(0,0,0,.15);
+    border-bottom: 1px solid rgba(0,0,0,.15);
+    background-color: #f3f6f8;
+}
+
+#arrow__button__prog:hover {
+	cursor: pointer;
+}
+
+.bullet__prog {
+	margin: 2px 5px 2px 5px;
+  	height: 5px;
+  	width: 5px;
+  	background-color: black;
+  	border-radius: 50%;
+  	display: inline-block;
+}
+
+.elem__text {
+	font-size: 14px;
+	font-weight: 400;
 }

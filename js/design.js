@@ -19,33 +19,53 @@ var coursesListElem = document.getElementsByClassName("elem");
 // console.log(arrowDownBtn);
 // console.log(arrowUpBtn);
 
-function removeBulletPoints() {
-	var bulletPointsList = document.getElementsByClassName("bullet");
+function removeBulletPoints(className = "", sectionList = "") {
+	if (className === "")
+		className = "bullet";
+	var bulletPointsList = document.getElementsByClassName(className);
+	// console.log(className);
 	// console.log(bulletPointsList.length);
 	while (bulletPointsList.length > 0) {
-		bulletPointsList[0].classList.remove("bullet");
+		bulletPointsList[0].classList.remove(className);
 	}
+
+	if (sectionList === "")
+		var coursesList = document.getElementsByClassName("courses__list")[0];
+	else
+		var coursesList = document.getElementById(sectionList);
 	coursesList.classList.add("long__list");
 }
 
-function listVerticalDisplay() {
+function listVerticalDisplay(elementName = "", sectionList = "") {
+	if (elementName === "")
+		elementName = "elem";
+	var coursesListElem = document.getElementsByClassName(elementName);
 	for (let elem of coursesListElem) {
 		elem.classList.remove("short__list");
 		elem.classList.add("long__list__elem", "bottom__line");
 	}
-	// remove bootom line to the las element
+	// remove bootom line to the last element
 	coursesListElem[coursesListElem.length-1].classList.remove("bottom__line");
+	if (sectionList === "")
+		var coursesList = document.getElementsByClassName("courses__list")[0];
+	else
+		var coursesList = document.getElementById(sectionList);
 	// remove 3 points for short version list
 	coursesList.classList.remove("end__points");
 }
 
-function putArrowUp() {
-	// var arrowBtn = document.getElementsByClassName("fa-chevron-down")[0];
+function putArrowUp(arrowClass = "") {
+	if (arrowClass === "")
+		var arrowBtn = document.getElementById("arrow__button");
+	else var arrowBtn = document.getElementById(arrowClass);
 	arrowBtn.classList.remove("fa-chevron-down");
 	arrowBtn.classList.add("fa-chevron-up");
 }
 
-function removeFadeIn() {
+function removeFadeIn(elementName = "") {
+	if (elementName === "")
+		elementName = "elem";
+	var coursesListElem = document.getElementsByClassName(elementName);
 	// courses section
 	for (let elem of coursesListElem) {
 		// elem.addClass('animated bounceOutLeft');
@@ -55,7 +75,10 @@ function removeFadeIn() {
 
 }
 
-function addFadeIn() {
+function addFadeIn(elementName = "") {
+	if (elementName === "")
+		elementName = "elem";
+	var coursesListElem = document.getElementsByClassName(elementName);
 	for (let elem of coursesListElem) {
 		// elem.addClass('animated bounceOutLeft');
 		// elem.classList.add("animated");
@@ -63,8 +86,10 @@ function addFadeIn() {
 	}
 }
 
-function addCoursesBackGround() {
-	var coursesSection = document.getElementById("courses");
+function addCoursesBackGround(sectionId = "") {
+	if (sectionId === "")
+		var coursesSection = document.getElementById("courses");
+	else var coursesSection = document.getElementById(sectionId);
 	coursesSection.classList.add("long__list__courses");
 }
 
@@ -77,32 +102,48 @@ function arrowDownClick() {
 	addCoursesBackGround();
 }
 
-function addBulletPoints() {
-	var bulletPointsList = document.getElementsByClassName("list__point");
-	console.log(bulletPointsList.length);
+function addBulletPoints(className = "", listPoint = "") {
+	if (className === "")
+		className = "bullet";
+	if (listPoint === "")
+		listPoint = "list__point";
+	var bulletPointsList = document.getElementsByClassName(listPoint);
+	// console.log(bulletPointsList.length);
 	for (let i = 0; i < bulletPointsList.length; i++) {
-		bulletPointsList[i].classList.add("bullet");
+		bulletPointsList[i].classList.add(className);
 	}
 	// coursesList.classList.remove("long__list");
 }
 
-function listHorizontalDisplay() {
+function listHorizontalDisplay(elementName = "", sectionList = "") {
+	if (elementName === "")
+		elementName = "elem";
+	var coursesListElem = document.getElementsByClassName(elementName);
 	for (let elem of coursesListElem) {
 		elem.classList.add("short__list");
 		elem.classList.remove("long__list__elem", "bottom__line");
 	}
+	if (sectionList === "")
+		var coursesList = document.getElementsByClassName("courses__list")[0];
+	else
+		var coursesList = document.getElementById(sectionList);
 	coursesList.classList.add("end__points");
 	// remove bootom line to the las element
 	// coursesListElem[coursesListElem.length-1].classList.add("bottom__line");
 }
 
-function putArrowDown() {
+function putArrowDown(arrowClass = "") {
+	if (arrowClass === "")
+		var arrowBtn = document.getElementById("arrow__button");
+	else var arrowBtn = document.getElementById(arrowClass);
 	arrowBtn.classList.remove("fa-chevron-up");
 	arrowBtn.classList.add("fa-chevron-down");
 }
 
-function removeCoursesBackGround() {
-	var coursesSection = document.getElementById("courses");
+function removeCoursesBackGround(sectionId = "") {
+	if (sectionId === "")
+		var coursesSection = document.getElementById("courses");
+	else var coursesSection = document.getElementById(sectionId);
 	coursesSection.classList.remove("long__list__courses");
 }
 
@@ -211,6 +252,47 @@ function certificationArrowClick () {
 
 arrowBtnCertification.addEventListener('click', certificationArrowClick);
 
+/*Logic for projects programming section long and short version
+ *
+ *
+ */
+
+var arrowBtnProg = document.getElementById("arrow__button__prog");
+var programmingListElem = document.getElementsByClassName("elem__prog");
+// var arrowBtnProg = document.getElementById("programm");
+// var arrowUpBtn = document.getElementsByClassName("fa-chevron-up")[0];
+// var coursesList = document.getElementsByClassName("courses__list")[0];
+
+
+function progArrowDownClick() {
+	removeBulletPoints("bullet__prog" , "programming__list");
+	listVerticalDisplay("elem__prog", "programming__list");
+	putArrowUp("arrow__button__prog");
+	addFadeIn("elem__prog");
+	//alert("merge");
+	addCoursesBackGround("programming");
+}
+
+function ProgArrowUpClick() {
+	addBulletPoints("bullet__prog", "list__point__prog");
+	listHorizontalDisplay("elem__prog", "programming__list");
+	putArrowDown("arrow__button__prog");
+	addFadeIn("elem__prog");
+	removeCoursesBackGround("programming");
+}
+// Create event listener "for extending list of courses
+function progArrowClick() {
+	if (arrowBtnProg.classList.contains("fa-chevron-down"))
+		progArrowDownClick();
+	else if (arrowBtnProg.classList.contains("fa-chevron-up"))
+		ProgArrowUpClick();
+	setTimeout(function() { removeFadeIn("elem__prog"); }, 1100);
+}
+
+arrowBtnProg.addEventListener('click', progArrowClick);
+
+
+
 //Function for adding fadeIn to text
 (function addAnimatedFadeIn() {
 	// Courses section
@@ -225,6 +307,13 @@ arrowBtnCertification.addEventListener('click', certificationArrowClick);
 		// elem.addClass('animated bounceOutLeft');
 		 element.classList.add("animated", "fadeIn");
 		 setTimeout(function() { removeFadeInCert(); }, 1100);
+	};
+	// Programming section
+	for (let element of programmingListElem) {
+		// console.log(certificationListElem);
+		// elem.addClass('animated bounceOutLeft');
+		 element.classList.add("animated", "fadeIn");
+		 setTimeout(function() { removeFadeIn("elem__prog"); }, 1100);
 	};
 })();
 
