@@ -263,6 +263,21 @@ var programmingListElem = document.getElementsByClassName("elem__prog");
 // var arrowUpBtn = document.getElementsByClassName("fa-chevron-up")[0];
 // var coursesList = document.getElementsByClassName("courses__list")[0];
 
+function showTextProject(className = "") {
+	var programmingListTextElem = document.getElementsByClassName(className);
+	for (let elem of programmingListTextElem) {
+		if (elem.classList.contains("hide"))
+			elem.classList.remove("hide");
+	}
+}
+
+function hideTextProject(className = "") {
+	var programmingListTextElem = document.getElementsByClassName(className);
+	for (let elem of programmingListTextElem) {
+		if (!elem.classList.contains("hide"))
+			elem.classList.add("hide");
+	}
+}
 
 function progArrowDownClick() {
 	removeBulletPoints("bullet__prog" , "programming__list");
@@ -271,6 +286,7 @@ function progArrowDownClick() {
 	addFadeIn("elem__prog");
 	//alert("merge");
 	addCoursesBackGround("programming");
+	showTextProject("elem__text__prog");
 }
 
 function ProgArrowUpClick() {
@@ -279,6 +295,7 @@ function ProgArrowUpClick() {
 	putArrowDown("arrow__button__prog");
 	addFadeIn("elem__prog");
 	removeCoursesBackGround("programming");
+	hideTextProject("elem__text__prog");
 }
 // Create event listener "for extending list of courses
 function progArrowClick() {
