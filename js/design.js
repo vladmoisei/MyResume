@@ -3,14 +3,14 @@ var skillEvaluation = document.getElementsByClassName("skill__evaluation");
 // console.log(skillEvaluation);
 for (let elem of skillEvaluation) {
 	for (let i = 0; i < 5; i++) {
-		elem.innerHTML += '<span class="dot black"></span>';
+		elem.innerHTML += '<span class="dot__circle black"></span>';
 	}
 }
 
 
 /*Logic for courses section long and short version
- *
- *
+ *************************************************************
+ *************************************************************
  */
 var arrowBtn = document.getElementById("arrow__button");
 var arrowUpBtn = document.getElementsByClassName("fa-chevron-up")[0];
@@ -166,8 +166,8 @@ function arrowClick() {
 arrowBtn.addEventListener('click', arrowClick);
 
 /*Logic for certification section long and short version
- *
- *
+ *************************************************************
+ *************************************************************
  */
 var certificationSection = document.getElementById("certification");
 var certificationListElem = document.getElementById("certification__list").children
@@ -252,9 +252,155 @@ function certificationArrowClick () {
 
 arrowBtnCertification.addEventListener('click', certificationArrowClick);
 
+/*Logic for projects automation section long and short version
+ *************************************************************
+ *************************************************************
+ */
+
+var arrowBtnAut = document.getElementById("arrow__button__aut");
+var automationListElem = document.getElementsByClassName("elem__aut");
+
+function showTextProject(className = "") {
+	var programmingListTextElem = document.getElementsByClassName(className);
+	for (let elem of programmingListTextElem) {
+		if (elem.classList.contains("hide"))
+			elem.classList.remove("hide");
+	}
+}
+
+function hideTextProject(className = "") {
+	var programmingListTextElem = document.getElementsByClassName(className);
+	for (let elem of programmingListTextElem) {
+		if (!elem.classList.contains("hide"))
+			elem.classList.add("hide");
+	}
+}
+
+function AutArrowDownClick() {
+	removeBulletPoints("bullet__aut" , "automation__list");
+	listVerticalDisplay("elem__aut", "automation__list");
+	putArrowUp("arrow__button__aut");
+	addFadeIn("elem__aut");
+	//alert("merge");
+	addCoursesBackGround("automation");
+	showTextProject("elem__text__aut");
+}
+
+function AutArrowUpClick() {
+	addBulletPoints("bullet__aut", "list__point__aut");
+	listHorizontalDisplay("elem__aut", "automation__list");
+	putArrowDown("arrow__button__aut");
+	addFadeIn("elem__aut");
+	removeCoursesBackGround("automation");
+	hideTextProject("elem__text__aut");
+}
+// Create event listener "for extending list of courses
+function autArrowClick() {
+	if (arrowBtnAut.classList.contains("fa-chevron-down"))
+		AutArrowDownClick();
+	else if (arrowBtnAut.classList.contains("fa-chevron-up"))
+		AutArrowUpClick();
+	setTimeout(function() { removeFadeIn("elem__aut"); }, 1100);
+}
+
+arrowBtnAut.addEventListener('click', autArrowClick);
+
+// Photos carrousel logic
+// First project
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+	showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+	showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+	var i;
+	var slides = document.getElementsByClassName("mySlides");
+	var dots = document.getElementsByClassName("dot");
+	if (n > slides.length) {slideIndex = 1}
+	if (n < 1) {slideIndex = slides.length}
+	for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = "none";
+	}
+	for (i = 0; i < dots.length; i++) {
+		dots[i].className = dots[i].className.replace(" active", "");
+	}
+	slides[slideIndex-1].style.display = "block";
+	dots[slideIndex-1].className += " active";
+}
+// Second project
+var slideIndexTwo = 1;
+showslidesTwo(slideIndexTwo);
+
+function plusSlidesTwo(n) {
+	showslidesTwo(slideIndexTwo += n);
+}
+
+function currentSlideTwo(n) {
+	showslidesTwo(slideIndexTwo = n);
+}
+
+function showslidesTwo(n) {
+	var i;
+	var slidesTwo = document.getElementsByClassName("mySlidesTwo");
+	var dotTwo = document.getElementsByClassName("dotTwo");
+	if (n > slidesTwo.length) {slideIndexTwo = 1}
+	if (n < 1) {slideIndexTwo = slidesTwo.length}
+	for (i = 0; i < slidesTwo.length; i++) {
+		slidesTwo[i].style.display = "none";
+	}
+	for (i = 0; i < dotTwo.length; i++) {
+		dotTwo[i].className = dotTwo[i].className.replace(" active", "");
+	}
+	slidesTwo[slideIndexTwo-1].style.display = "block";
+	dotTwo[slideIndexTwo-1].className += " active";
+}
+
+// Show/ hide photos automation projects
+
+var photosContainer1 = document.getElementById("imagesContainer1");
+var photosContainer2 = document.getElementById("imagesContainer2");
+var dots1 = document.getElementById("dots1");
+var dots2 = document.getElementById("dots2");
+var imagShowBtn1 = document.getElementById("imagShowBtn1");
+var imagShowBtn2 = document.getElementById("imagShowBtn2");
+
+imagShowBtn1.addEventListener('click', function (e) {
+	e.preventDefault();
+	if (photosContainer1.classList.contains('hide')) {
+		photosContainer1.classList.remove('hide');
+		dots1.classList.remove('hide');
+		imagShowBtn1.innerText = "Hide photos";
+	}
+	else {
+		photosContainer1.classList.add('hide');
+		dots1.classList.add('hide');
+		imagShowBtn1.innerText = "Show photos";
+	}
+});
+
+imagShowBtn2.addEventListener('click', function (e) {
+	e.preventDefault();
+	if (photosContainer2.classList.contains('hide')) {
+		photosContainer2.classList.remove('hide');
+		dots2.classList.remove('hide');
+		imagShowBtn2.innerText = "Hide photos";
+	}
+	else {
+		photosContainer2.classList.add('hide');
+		dots2.classList.add('hide');
+		imagShowBtn2.innerText = "Show photos";
+	}
+});
+
 /*Logic for projects programming section long and short version
- *
- *
+ *************************************************************
+ *************************************************************
  */
 
 var arrowBtnProg = document.getElementById("arrow__button__prog");
@@ -324,6 +470,14 @@ arrowBtnProg.addEventListener('click', progArrowClick);
 		// elem.addClass('animated bounceOutLeft');
 		 element.classList.add("animated", "fadeIn");
 		 setTimeout(function() { removeFadeInCert(); }, 1100);
+	};
+
+	// Programming section
+	for (let element of automationListElem) {
+		// console.log(certificationListElem);
+		// elem.addClass('animated bounceOutLeft');
+		 element.classList.add("animated", "fadeIn");
+		 setTimeout(function() { removeFadeIn("elem__aut"); }, 1100);
 	};
 	// Programming section
 	for (let element of programmingListElem) {
