@@ -127,7 +127,8 @@ function listHorizontalDisplay(elementName = "", sectionList = "") {
 		var coursesList = document.getElementsByClassName("courses__list")[0];
 	else
 		var coursesList = document.getElementById(sectionList);
-	coursesList.classList.add("end__points");
+	if (elementName === "elem")
+		coursesList.classList.add("end__points");
 	// remove bootom line to the las element
 	// coursesListElem[coursesListElem.length-1].classList.add("bottom__line");
 }
@@ -454,6 +455,46 @@ function progArrowClick() {
 
 arrowBtnProg.addEventListener('click', progArrowClick);
 
+/*Logic for interview section long and short version
+ *************************************************************
+ *************************************************************
+ */
+
+var arrowBtnInter = document.getElementById("arrow__button__interview");
+var interviewListElem = document.getElementsByClassName("elem__inter");
+// var arrowBtnProg = document.getElementById("programm");
+// var arrowUpBtn = document.getElementsByClassName("fa-chevron-up")[0];
+// var coursesList = document.getElementsByClassName("courses__list")[0];
+
+
+function interArrowDownClick() {
+	//removeBulletPoints("bullet__prog" , "programming__list");
+	listVerticalDisplay("elem__inter", "interview__list");
+	putArrowUp("arrow__button__interview");
+	addFadeIn("elem__inter");
+	//alert("merge");
+	addCoursesBackGround("interview");
+	showTextProject("elem__text__inter");
+}
+
+function interArrowUpClick() {
+	//addBulletPoints("bullet__prog", "list__point__prog");
+	listHorizontalDisplay("elem__inter", "interview__list");
+	putArrowDown("arrow__button__interview");
+	addFadeIn("elem__inter");
+	removeCoursesBackGround("interview");
+	hideTextProject("elem__text__inter");
+}
+// Create event listener "for extending list of courses
+function interArrowClick() {
+	if (arrowBtnInter.classList.contains("fa-chevron-down"))
+		interArrowDownClick();
+	else if (arrowBtnInter.classList.contains("fa-chevron-up"))
+		interArrowUpClick();
+	setTimeout(function() { removeFadeIn("elem__prog"); }, 1100);
+}
+
+arrowBtnInter.addEventListener('click', interArrowClick);
 
 
 //Function for adding fadeIn to text
@@ -481,6 +522,13 @@ arrowBtnProg.addEventListener('click', progArrowClick);
 	};
 	// Programming section
 	for (let element of programmingListElem) {
+		// console.log(certificationListElem);
+		// elem.addClass('animated bounceOutLeft');
+		 element.classList.add("animated", "fadeIn");
+		 setTimeout(function() { removeFadeIn("elem__prog"); }, 1100);
+	};
+	// Interview section
+	for (let element of interviewListElem) {
 		// console.log(certificationListElem);
 		// elem.addClass('animated bounceOutLeft');
 		 element.classList.add("animated", "fadeIn");

@@ -689,3 +689,58 @@ img {vertical-align: middle;}
 	color: #6cc180;
 }
 
+/*Interview FAQ section*/
+
+#interview {
+    line-height: 24px;
+}
+
+#interview h3 {
+	color: #0084bf;
+	line-height: 1.5;
+    font-weight: 600;
+    padding: 20px 0 0 10px;
+}
+
+/*.nr__programming {
+	font-size: 24px;
+}*/
+
+/*#interview__list .short__list {
+	display: inline;
+}
+*/
+.long__list__interview {
+	display: block;
+	border-top: 1px solid rgba(0,0,0,.15);
+    border-bottom: 1px solid rgba(0,0,0,.15);
+    background-color: #f3f6f8;
+}
+
+#arrow__button__interview:hover {
+	cursor: pointer;
+}
+
+.bullet__inter {
+	margin: 2px 5px 2px 5px;
+  	height: 5px;
+  	width: 5px;
+  	background-color: black;
+  	border-radius: 50%;
+  	display: inline-block;
+}
+
+.elem__text__inter {
+	font-size: 14px;
+	font-weight: 400;
+}
+
+/*.elem__text__prog a {
+	text-decoration: none;
+	color: #185878;
+}
+
+.elem__text__prog a:hover {
+	color: #6cc180;
+}
+*/
