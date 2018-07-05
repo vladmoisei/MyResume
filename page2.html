@@ -59,12 +59,12 @@
 			</section>
 			<section class="more cell">
 				<h1 class="more__title">More about me</h1>
-				<p><a href="/">Resume</a></p>
-				<p><a href="#courses">Courses</a></p>
-				<p><a href="#certification">Certification</a></p>
-				<p><a href="#automation">Automation projects</a></p>
-				<p><a href="#programming">Programming projects</a></p>
-				<p><a href="#interview">Interview FAQ</a></p>
+				<p><a href="/MyResume/">Resume</a></p>
+				<p><a href="#courses" onclick="arrowDownClick()">Courses</a></p>
+				<p><a href="#certification" onclick="certificationArrowDownClick()">Certification</a></p>
+				<p><a href="#automation" onclick="AutArrowDownClick()">Automation projects</a></p>
+				<p><a href="#programming" onclick="progArrowDownClick()">Programming projects</a></p>
+				<p><a href="#interview" onclick="interArrowDownClick()">Interview FAQ</a></p>
 			</section>
 		</aside>
 		<main>
@@ -95,7 +95,7 @@
 				</ul>
 			</section>
 			<section id="automation">
-				<h3><span class="nr__automation">2</span> Automation Projects<span class="fa fa-chevron-down" id="arrow__button__aut"></span></h3>
+				<h3><span class="nr__automation">3</span> Automation Projects<span class="fa fa-chevron-down" id="arrow__button__aut"></span></h3>
 				<ul id="automation__list" class="certification__list__short">
 					<li class="elem__aut short__list">Cooling tower
 						<div class="elem__text__aut hide"">
@@ -141,6 +141,52 @@
 							</div>
 
 							<a id="imagShowBtn1" href="#">Show photos
+							</a>
+						</div>
+					</li>
+					<li class="elem__aut short__list"><span class="list__point__aut bullet__aut"></span>High pressure pumps
+						<div class="elem__text__aut hide"">
+							<p>- The goal of this project was to make an automatic descaling of the bars in the production line.<br>
+							- I programmed a Siemens S300 PLC and a HMI panel to show different states of electrovalves, temperature sensors and pumps. I used Step 7 to program the PLC and WinccFlexible to program the HMI panel.
+							</p>
+							<div id="imagesContainer3" class="slideshow-container hide">
+
+								<div class="mySlidesThree fade">
+									<div class="numbertext">1 / 4</div>
+									<img src="img/aut_projects/p3_1.jpg">
+									<div class="text">HMI Panel</div>
+								</div>
+
+								<div class="mySlidesThree fade">
+									<div class="numbertext">2 / 4</div>
+									<img src="img/aut_projects/p3_2.jpg">
+									<div class="text">Star delta starting of motors</div>
+								</div>
+
+								<div class="mySlidesThree fade">
+									<div class="numbertext">3 / 4</div>
+									<img src="img/aut_projects/p3_3.jpg">
+									<div class="text">PLC cabinet</div>
+								</div>
+
+								<div class="mySlidesThree fade">
+									<div class="numbertext">4 / 4</div>
+									<img src="img/aut_projects/p3_4.jpg">
+									<div class="text">Pumps</div>
+								</div>
+								<a class="prev" onclick="plusSlidesThree(-1)">&#10094;</a>
+								<a class="next" onclick="plusSlidesThree(1)">&#10095;</a>
+
+							</div>
+							<br>
+
+							<div id="dots3" class="hide" style="text-align:center">
+								<span class="dotThree" onclick="currentSlideThree(1)"></span>
+								<span class="dotThree" onclick="currentSlideThree(2)"></span>
+								<span class="dotThree" onclick="currentSlideThree(3)"></span>
+								<span class="dotThree" onclick="currentSlideThree(4)"></span>
+							</div>
+							<a id="imagShowBtn3" href="#">Show photos
 							</a>
 						</div>
 					</li>
@@ -200,7 +246,7 @@
 							<p>- The goal of this project was to build a complete browser-based card matching game (also known as Concentration), to write code conform Udacity's code style guide.<br>
 							- I used HTML, CSS and JavaScript to make animations to cards, modal popups, leaderboard's table and game's logic.
 							</p>
-							<a href="https://vladmoisei.github.io/Fend-Memory-Game-Project-Vlad/">See project
+							<a href="https://vladmoisei.github.io/Fend-Memory-Game-Project-Vlad/" target="_blank">See project
 							</a>
 						</div>
 					</li>
@@ -209,7 +255,7 @@
 							<p>- The goal of this project was to transform a design mockup into a functioning responsive website complete with images, text descriptions and links; and to write code conform Udacity's code style guide.<br>
 							- I used HTML and CSS to make customizations to the design and I made responsive elements on page.
 							</p>
-							<a href="https://vladmoisei.github.io/Portfolio/">See project
+							<a href="https://vladmoisei.github.io/Portfolio/" target="_blank">See project
 							</a>
 						</div>
 					</li>
@@ -228,8 +274,8 @@
 					</li>
 					<li class="elem__inter short__list">Tell me about your actual job?
 						<div class="elem__text__inter hide"">
-							<p>In 2012 it came up an opportunity for an automation engineer with expertise in Siemens PLC at the rolling mill. I decided to take this role because I wanted to grow my expertise in Siemens PLC, because Yokogawa system it is not so well known as Siemens.<br>
-							After one month that I came, they started to build a new production line for flat(plate); they also made revamping of a big area of production line for round with Siemens PLC S400. I worked closely to the automation engineer responsible for installing the new production line and revamping; he teached me more about the programs that he made.<br>At the rolling mill, because of the big numbers of electrical motors, I developed my <strong>electrical skills (i learn about drives/ inverters of motors, starting modes of AC motors, protections of motors)</strong>.<br>I also made up from scratch different automation systems for pumps, cooling system where I used <strong>Siemens S300 PLC</strong> and drive for motor.
+							<p>In 2012 it came up an opportunity for an automation engineer with expertise in Siemens PLC at the rolling mill. I decided to take this role because I wanted to grow my expertise in Siemens PLC, because Yokogawa system it is not so well used/known as Siemens.<br>
+							After one month that I came in, they started to build a new production line for slab(plate); they also made revamping of a big area of production line for round with Siemens PLC S400. I worked closely to the automation engineer responsible for installing the new production line and revamping; he teached me more about the programs that he made.<br>At the rolling mill, because of the big numbers of electrical motors, I developed my <strong>electrical skills (i learnt about drives/ inverters of motors, starting modes of AC motors, protections of motors)</strong>.<br>I also made up from scratch different automation systems for pumps, cooling system where I used <strong>Siemens S300 PLC</strong> and drive for motor.
 							</p>
 						</div>
 					</li>
@@ -244,18 +290,19 @@
 							<p>Other task:<br>
 								- make new projects for small electrical systems<br>
 								- assist to the new installation of new machines<br>
+								- analysis of breakdown reports
 							</p>
 						</div>
 					</li>
 					<li class="elem__inter short__list">What motivates you?
 						<div class="elem__text__inter hide"">
-							<p>I would like to have clear objectives, problems to solve or projects to do and a career path. My objectiv is to find solutions for problems, finish projects and fulfill the objectives.
+							<p>I would like to have clear objectives, or projects to do and a career path. My objectiv is to find solutions for problems, finish projects and fulfill the objectives.
 							</p>
 						</div>
 					</li>
 					<li class="elem__inter short__list">Why do you want to leave?
 						<div class="elem__text__inter hide"">
-							<p>Here I feel like I can’t develop further in my career, I can’t grow anymore.
+							<p>Here I feel like I can’t develop further in my career, I can’t grow anymore. I would like to have a new challenge.
 							</p>
 						</div>
 					</li>
@@ -267,7 +314,7 @@
 					</li> -->
 					<li class="elem__inter short__list">Tell me a little about you?
 						<div class="elem__text__inter hide"">
-							<p>My passion is programming and for this reason I've made some courses and little projects.
+							<p>I am a lifelong learner with problem-solving skills, passionate about programming and for this reason, I've made some courses and <a href="https://vladmoisei.github.io/Portfolio/" target="_blank">little projects</a>. I am also passionate about <a href="img/sports.jpg" target="_blank">sports</a>, <a href="img/travel.jpg" target="_blank">traveling</a> and <a href="img/mountain.jpg" target="_blank">climbing up the mountain</a>
 							</p>
 						</div>
 					</li>

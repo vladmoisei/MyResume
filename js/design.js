@@ -362,14 +362,44 @@ function showslidesTwo(n) {
 	dotTwo[slideIndexTwo-1].className += " active";
 }
 
+// Third project
+var slideIndexThree = 1;
+showslidesThree(slideIndexThree);
+
+function plusSlidesThree(n) {
+	showslidesThree(slideIndexThree += n);
+}
+
+function currentSlideThree(n) {
+	showslidesThree(slideIndexThree = n);
+}
+
+function showslidesThree(n) {
+	var i;
+	var slidesThree = document.getElementsByClassName("mySlidesThree");
+	var dotThree = document.getElementsByClassName("dotThree");
+	if (n > slidesThree.length) {slideIndexThree = 1}
+	if (n < 1) {slideIndexThree = slidesThree.length}
+	for (i = 0; i < slidesThree.length; i++) {
+		slidesThree[i].style.display = "none";
+	}
+	for (i = 0; i < dotThree.length; i++) {
+		dotThree[i].className = dotThree[i].className.replace(" active", "");
+	}
+	slidesThree[slideIndexThree-1].style.display = "block";
+	dotThree[slideIndexThree-1].className += " active";
+}
 // Show/ hide photos automation projects
 
 var photosContainer1 = document.getElementById("imagesContainer1");
 var photosContainer2 = document.getElementById("imagesContainer2");
+var photosContainer3 = document.getElementById("imagesContainer3");
 var dots1 = document.getElementById("dots1");
 var dots2 = document.getElementById("dots2");
+var dots3 = document.getElementById("dots3");
 var imagShowBtn1 = document.getElementById("imagShowBtn1");
 var imagShowBtn2 = document.getElementById("imagShowBtn2");
+var imagShowBtn3 = document.getElementById("imagShowBtn3");
 
 imagShowBtn1.addEventListener('click', function (e) {
 	e.preventDefault();
@@ -396,6 +426,20 @@ imagShowBtn2.addEventListener('click', function (e) {
 		photosContainer2.classList.add('hide');
 		dots2.classList.add('hide');
 		imagShowBtn2.innerText = "Show photos";
+	}
+});
+
+imagShowBtn3.addEventListener('click', function (e) {
+	e.preventDefault();
+	if (photosContainer3.classList.contains('hide')) {
+		photosContainer3.classList.remove('hide');
+		dots3.classList.remove('hide');
+		imagShowBtn3.innerText = "Hide photos";
+	}
+	else {
+		photosContainer3.classList.add('hide');
+		dots3.classList.add('hide');
+		imagShowBtn3.innerText = "Show photos";
 	}
 });
 
@@ -491,7 +535,7 @@ function interArrowClick() {
 		interArrowDownClick();
 	else if (arrowBtnInter.classList.contains("fa-chevron-up"))
 		interArrowUpClick();
-	setTimeout(function() { removeFadeIn("elem__prog"); }, 1100);
+	setTimeout(function() { removeFadeIn("elem__inter"); }, 1100);
 }
 
 arrowBtnInter.addEventListener('click', interArrowClick);
@@ -532,7 +576,7 @@ arrowBtnInter.addEventListener('click', interArrowClick);
 		// console.log(certificationListElem);
 		// elem.addClass('animated bounceOutLeft');
 		 element.classList.add("animated", "fadeIn");
-		 setTimeout(function() { removeFadeIn("elem__prog"); }, 1100);
+		 setTimeout(function() { removeFadeIn("elem__inter"); }, 1100);
 	};
 })();
 

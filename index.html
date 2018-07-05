@@ -58,7 +58,7 @@
 			</section>
 			<section class="more cell">
 				<h1 class="more__title">More about me</h1>
-				<p><a href="page2.html#courses">Courses</a></p>
+				<p><a href="page2.html#courses" onclick="setTimeout(arrowDownClick, 2000);">Courses</a></p>
 				<p><a href="page2.html#certification">Certification</a></p>
 				<p><a href="page2.html#automation">Automation projects</a></p>
 				<p><a href="page2.html#programming">Programming projects</a></p>
@@ -74,21 +74,21 @@
 				<div class="contact__list">
 					<ul>
 						<li>
-							<a href="https://www.linkedin.com/in/vlad-moisei/">
+							<a href="https://www.linkedin.com/in/vlad-moisei/" target="_blank">
 								<!-- <img src="img/linkedin-icon.svg" alt="Linkedin symbol"> -->
 								<i class="fab fa-linkedin-in"></i>
 								<span>linkedin.com/in/vlad-moisei</span>
 							</a>
 						</li>
 						<li>
-							<a href="https://www.facebook.com/vladmoisei">
+							<a href="https://www.facebook.com/vladmoisei" target="_blank">
 								<!-- <img src="img/facebook-2.svg" alt="Facebook symbol"> -->
 								<i class="fab fa-facebook-f"></i>
 								<span>facebook.com/vladmoisei</span>
 							</a>
 						</li>
 						<li>
-							<a href="https://github.com/vladmoisei">
+							<a href="https://github.com/vladmoisei" target="_blank">
 								<!-- <img src="img/github-icon-1.svg" alt="Github symbol"> -->
 								<i class="fab fa-github"></i>
 								<span>github.com/vladmoisei</span>
@@ -100,7 +100,7 @@
 					<ul>
 						<li>Phone: +40-727-385743</li>
 						<li>Email: <a href="mailto:vladmoisei@yahoo.com?Subject=Hello%20again" target="_top">vladmoisei@yahoo.com</a></li>
-						<li>Location: <a href="https://www.google.ro/maps/place/C%C4%83l%C4%83ra%C8%99i/@44.2088371,27.2894807,13z/data=!3m1!4b1!4m5!3m4!1s0x40b022bcd70432fb:0x214283a3c0ceb78d!8m2!3d44.2085144!4d27.3137439">Romania, Calarasi</a></li>
+						<li>Location: <a href="https://www.google.ro/maps/place/C%C4%83l%C4%83ra%C8%99i/@44.2088371,27.2894807,13z/data=!3m1!4b1!4m5!3m4!1s0x40b022bcd70432fb:0x214283a3c0ceb78d!8m2!3d44.2085144!4d27.3137439" target="_blank">Romania, Calarasi</a></li>
 					</ul>
 				</div>
 			</section>
@@ -112,7 +112,7 @@
 						<p>05-09</p>
 					</div>
 					<div class="education__text">
-						<p><a href="https://www.linkedin.com/school/politehnica-university-of-bucharest/">University POLITEHNICA of Bucharest</a><br>Engineer, Mechatronics</p>
+						<p><a href="https://www.linkedin.com/school/politehnica-university-of-bucharest/" target="_blank">University POLITEHNICA of Bucharest</a><br>Engineer, Mechatronics</p>
 					</div>
 				</div>
 				<div class="education__container">
@@ -129,20 +129,30 @@
 				<div class="work__container">
 					<div class="work__date"><p>12-18</p></div>
 					<div class="work__experience">
-						<p><strong>Donalam<br>Maintenance, Automation engineer<br>Calarasi| <a href="http://www.gruppobeltrame.com/">AFV Beltrame Group - Donalam</a></strong></p>
+						<p><strong>Donalam<br>Maintenance, Automation engineer<br>Calarasi| <a href="http://www.gruppobeltrame.com/" target="_blank">AFV Beltrame Group - Donalam</a></strong></p>
 						<p class="experience__p">- Configure the existing PLC's, HMI and DC/ AC Drivers (Siemens Micromaster Series, Sinamics, G 120; ABB; EEI) for the needs of production.<br>- Fix faults in the electrical system in the shortest amount of time, improving the production efficiency to 95%.<br>- Develop software (Siemens Step 7, WinCC, WinCC Flexible, TIA Portal) for different projects.<br>- Commission new drives (Siemens Micro Master Series, G 120) for different projects.</p>
 					</div>
 				</div>
 				<div class="work__container">
 					<div class="work__date"><p>10-12</p></div>
 					<div class="work__experience">
-						<p><strong>Saint Gobain Glass Romania<br>Maintenance, Automation engineer<br>Calarasi| <a href="http://www.saint-gobain.ro/">Saint Gobain</a></strong></p>
+						<p><strong>Saint Gobain Glass Romania<br>Maintenance, Automation engineer<br>Calarasi| <a href="http://www.saint-gobain.ro/" target="_blank">Saint Gobain</a></strong></p>
 						<p class="experience__p">- Found faults in the automation/ electrical system and fixed them in the shortest amount of time.<br>- Configured the existing PLC/ DCS system according to the new installed equipment or with the production's needs.<br>- Ensured that all the instrumentation's equipment was certified every year.<br>- Completed the preventive maintenance plan with an efficiency of 100% and ensured the stock for spare parts, by ordering them in SAP.</p>
 					</div>
 				</div>
 			</section>
 		</main>
-		<script src="js/design.js"></script>
+		<script type="text/javascript">
+			// Add points to important skills
+			var skillEvaluation = document.getElementsByClassName("skill__evaluation");
+			// console.log(skillEvaluation);
+			for (let elem of skillEvaluation) {
+				for (let i = 0; i < 5; i++) {
+				elem.innerHTML += '<span class="dot__circle black"></span>';
+				}
+			}
+		</script>
+		<!-- <script src="js/design.js"></script> -->
 	</div>
 </body>
 </html>
