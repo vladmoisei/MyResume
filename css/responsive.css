@@ -1,7 +1,71 @@
 @media screen and (min-width: 1010px) {
-	body {
+	.container {
 		width: 1000px;
 		margin-left: auto;
 		margin-right: auto;
+	}
+}
+
+@media screen and (min-width: 750px) and (max-width: 1009px) {
+	.container {
+		width: 750px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.name__title {
+		font-size: 36px;
+	}
+
+	.skills__title, .language__title, .more__title {
+		font-size: 1em;
+	}
+
+	.skill__name, .language {
+		font-size: 14px;
+	}
+
+	.more p {
+		font-size: 14px;
+	}
+
+	h3 {
+		font-size: 1em;
+	}
+
+	#courses, #certification, #automation, #programming, #interview {
+		line-height: 20px;
+	}
+
+	.short__list {
+		font-size: 14px;
+	}
+
+	.long__list__elem {
+		font-size: 14px;
+	}
+
+	.cisco__logo {
+		font-size: 18px;
+	}
+
+	.about__me h1 {
+		font-size: 2em;
+	}
+
+	.about__me p {
+		line-height: 1.3;
+	}
+
+	.contact__list li {
+		overflow: hidden;
+	}
+
+	.fa-2x {
+		font-size: 1.5em;
+	}
+
+	.education h1 {
+		font-size: 1.5em;
 	}
 }
