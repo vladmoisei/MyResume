@@ -67,8 +67,12 @@
 		</aside>
 		<main>
 			<section class="about__me">
-				<h1>About me</h1>
-				<p>I am an enthusiastic automation specialist and lifelong learner with extensive experience in maintenance on machines and PLC's programs in the industrial field. I am passionate about sports, programming and technology. I am skilled in solving engineering problems in the automation and electrical fields. </p>
+				<h1>
+					<a id="menu" class="header__menu">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"></path></svg></a>
+					About me
+				</h1>
+				<p id="about__me__text" class="end__points__about">I am an enthusiastic automation specialist and lifelong learner with extensive experience in maintenance on machines and PLC's programs in the industrial field. I am passionate about sports, programming and technology. I am skilled in solving engineering problems in the automation and electrical fields. </p>
 			</section>
 			<section class="contact">
 				<div class="contact__list">
@@ -142,7 +146,7 @@
 				</div>
 			</section>
 		</main>
-		<script type="text/javascript">
+<!-- 		<script type="text/javascript">
 			// Add points to important skills
 			var skillEvaluation = document.getElementsByClassName("skill__evaluation");
 			// console.log(skillEvaluation);
@@ -151,8 +155,52 @@
 				elem.innerHTML += '<span class="dot__circle black"></span>';
 				}
 			}
-		</script>
-		<!-- <script src="js/design.js"></script> -->
+
+			var aboutMeText = document.getElementById("about__me__text");
+
+			aboutMeText.addEventListener('click', function() {
+				if (aboutMeText.classList.contains("end__points__about")) {
+					aboutMeText.classList.remove("end__points__about");
+				}
+			});
+
+			// Function for event listener screen < 749px
+			var aboutMEParagraph = document.getElementById("about__me__text");
+			function myFunction(win) {
+    			if (win.matches) { // If media query matches
+    				// document.body.style.backgroundColor = "yellow";
+    				if (!aboutMEParagraph.classList.contains("end__points__about")) {
+    					aboutMEParagraph.classList.add("end__points__about");
+    				}
+    			} else {
+    				// document.body.style.backgroundColor = "pink";
+    			}
+			};
+
+			var win = window.matchMedia("(max-width: 749px)");
+			myFunction(win); // Call listener function at run time
+			win.addListener(myFunction); // Attach listener function on state changes
+			// *******************************************
+			// *******************************************
+
+
+      		/*
+       		* Open the drawer when the menu ison is clicked.
+       		*/
+       		var menu = document.querySelector('#menu');
+       		var main = document.querySelector('main');
+       		var drawer = document.querySelector('.menu__aside');
+
+       		menu.addEventListener('click', function(e) {
+       		drawer.classList.toggle('open');
+       		e.stopPropagation();
+       		});
+       		main.addEventListener('click', function() {
+       		drawer.classList.remove('open');
+       		});
+
+		</script> -->
+		<script src="js/index.js"></script>
 	</div>
 </body>
 </html>

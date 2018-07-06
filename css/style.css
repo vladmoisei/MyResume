@@ -6,12 +6,14 @@
 body {
 	width: 100%;
 }
+
 .container {
 	width: 100%;
 	background-color: #f1f1f1;
 	max-width: 100%;
 	display: flex;
-	margin: 40px;
+	margin-top: 20px;
+	/*margin: 40px;*/
 }
 
 aside {
@@ -40,6 +42,7 @@ main {
 .about__me h1 {
 	padding-top: 20px;
 	font-size: 3em;
+	/*margin-right: 20px;*/
 }
 
 .about__me p {
@@ -759,4 +762,13 @@ img {vertical-align: middle;}
 
 .elem__text__inter a:hover {
 	color: #6cc180;
+}
+
+.header__menu svg {
+    width: 32px;
+    fill: #E0E0E0;
+    float: right;
+    margin-right: 10px;
+    display: none;
+    cursor: pointer;
 }
