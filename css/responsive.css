@@ -144,11 +144,11 @@
 	.end__points__about {
 		-webkit-line-clamp:3;
 		max-height: 65px;
-    	overflow: hidden;
-    	display: -webkit-box;
-    	-webkit-box-orient: vertical;
-   		text-overflow: ellipsis;
-   		cursor: pointer;
+		overflow: hidden;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		text-overflow: ellipsis;
+		cursor: pointer;
 	}
 
 	aside {

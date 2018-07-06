@@ -117,20 +117,20 @@ main {
 }
 
 .line__behind {
-  	text-align: center;
+	text-align: center;
 }
 
 .line__behind span {
 	background: #f1f1f1;
 	padding: 0 20px;
-  	text-align: center;
+	text-align: center;
 }
 
 .line__behind+* {
 	margin-left: 5%;
 	width: 90%;
-  	border-top: solid 2px #adac97;
-  	margin-top: -45px;
+	border-top: solid 2px #adac97;
+	margin-top: -45px;
 }
 
 .education {
@@ -212,7 +212,7 @@ main {
 	display: flex;
 	line-height: 1.5;
 	font-family: 'Cormorant Garamond', serif;
-    font-size: 18px;
+	font-size: 18px;
 }
 
 .experience__p {
@@ -275,12 +275,12 @@ main {
 
 .dot__circle {
 	margin-left: 10px;
-  	margin-top: 5px;
-  	height: 15px;
-  	width: 15px;
-  	background-color: #bbb;
-  	border-radius: 50%;
-  	display: inline-block;
+	margin-top: 5px;
+	height: 15px;
+	width: 15px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
 }
 
 .black {
@@ -327,13 +327,13 @@ main {
 /*Courses section*/
 
 #courses {
-    line-height: 24px;
+	line-height: 24px;
 }
 
 .long__list__courses {
 	border-top: 1px solid rgba(0,0,0,.15);
-    border-bottom: 1px solid rgba(0,0,0,.15);
-    background-color: #f3f6f8;
+	border-bottom: 1px solid rgba(0,0,0,.15);
+	background-color: #f3f6f8;
 }
 
 .long__list {
@@ -343,8 +343,8 @@ main {
 #courses h3 {
 	color: #0084bf;
 	line-height: 1.5;
-    font-weight: 600;
-    padding: 20px 0 0 10px;
+	font-weight: 600;
+	padding: 20px 0 0 10px;
 }
 
 .nr__courses {
@@ -380,39 +380,39 @@ main {
 
 .bullet {
 	margin: 2px 5px 2px 5px;
-  	height: 5px;
-  	width: 5px;
-  	background-color: black;
-  	border-radius: 50%;
-  	display: inline-block;
+	height: 5px;
+	width: 5px;
+	background-color: black;
+	border-radius: 50%;
+	display: inline-block;
 }
 
 .end__points {
 	-webkit-line-clamp:3;
 	max-height: 70px;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    text-overflow: ellipsis;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	text-overflow: ellipsis;
 }
 
 /*Certification section*/
 
 #certification {
-    line-height: 24px;
+	line-height: 24px;
 }
 
 .long__list__certification {
 	border-top: 1px solid rgba(0,0,0,.15);
-    border-bottom: 1px solid rgba(0,0,0,.15);
-    background-color: #f3f6f8;
+	border-bottom: 1px solid rgba(0,0,0,.15);
+	background-color: #f3f6f8;
 }
 
 #certification h3 {
 	color: #0084bf;
 	line-height: 1.5;
-    font-weight: 600;
-    padding: 20px 0 0 10px;
+	font-weight: 600;
+	padding: 20px 0 0 10px;
 }
 
 .nr__certification {
@@ -465,9 +465,9 @@ main {
 	font-size: 30px;
 */
 	vertical-align: baseline;
-    font-size: 20px;
-    height: 30px;
-    /*color: rgba(0,0,0,.6);*/
+	font-size: 20px;
+	height: 30px;
+	/*color: rgba(0,0,0,.6);*/
 }
 
 .hide {
@@ -477,14 +477,14 @@ main {
 /*Automation project section*/
 
 #automation {
-    line-height: 24px;
+	line-height: 24px;
 }
 
 #automation h3 {
 	color: #0084bf;
 	line-height: 1.5;
-    font-weight: 600;
-    padding: 20px 0 0 10px;
+	font-weight: 600;
+	padding: 20px 0 0 10px;
 }
 
 .nr__automation {
@@ -498,8 +498,8 @@ main {
 .long__list__automation {
 	display: block;
 	border-top: 1px solid rgba(0,0,0,.15);
-    border-bottom: 1px solid rgba(0,0,0,.15);
-    background-color: #f3f6f8;
+	border-bottom: 1px solid rgba(0,0,0,.15);
+	background-color: #f3f6f8;
 }
 
 #arrow__button__aut:hover {
@@ -508,11 +508,11 @@ main {
 
 .bullet__aut {
 	margin: 2px 5px 2px 5px;
-  	height: 5px;
-  	width: 5px;
-  	background-color: black;
-  	border-radius: 50%;
-  	display: inline-block;
+	height: 5px;
+	width: 5px;
+	background-color: black;
+	border-radius: 50%;
+	display: inline-block;
 }
 
 .elem__text__aut {
@@ -647,14 +647,14 @@ img {vertical-align: middle;}
 /*Programming project section*/
 
 #programming {
-    line-height: 24px;
+	line-height: 24px;
 }
 
 #programming h3 {
 	color: #0084bf;
 	line-height: 1.5;
-    font-weight: 600;
-    padding: 20px 0 0 10px;
+	font-weight: 600;
+	padding: 20px 0 0 10px;
 }
 
 .nr__programming {
@@ -668,8 +668,8 @@ img {vertical-align: middle;}
 .long__list__programming {
 	display: block;
 	border-top: 1px solid rgba(0,0,0,.15);
-    border-bottom: 1px solid rgba(0,0,0,.15);
-    background-color: #f3f6f8;
+	border-bottom: 1px solid rgba(0,0,0,.15);
+	background-color: #f3f6f8;
 }
 
 #arrow__button__prog:hover {
@@ -678,11 +678,11 @@ img {vertical-align: middle;}
 
 .bullet__prog {
 	margin: 2px 5px 2px 5px;
-  	height: 5px;
-  	width: 5px;
-  	background-color: black;
-  	border-radius: 50%;
-  	display: inline-block;
+	height: 5px;
+	width: 5px;
+	background-color: black;
+	border-radius: 50%;
+	display: inline-block;
 }
 
 .elem__text__prog {
@@ -702,14 +702,14 @@ img {vertical-align: middle;}
 /*Interview FAQ section*/
 
 #interview {
-    line-height: 24px;
+	line-height: 24px;
 }
 
 #interview h3 {
 	color: #0084bf;
 	line-height: 1.5;
-    font-weight: 600;
-    padding: 20px 0 0 10px;
+	font-weight: 600;
+	padding: 20px 0 0 10px;
 }
 
 /*.nr__programming {
@@ -723,8 +723,8 @@ img {vertical-align: middle;}
 .long__list__interview {
 	display: block;
 	border-top: 1px solid rgba(0,0,0,.15);
-    border-bottom: 1px solid rgba(0,0,0,.15);
-    background-color: #f3f6f8;
+	border-bottom: 1px solid rgba(0,0,0,.15);
+	background-color: #f3f6f8;
 }
 
 #arrow__button__interview:hover {
@@ -733,11 +733,11 @@ img {vertical-align: middle;}
 
 .bullet__inter {
 	margin: 2px 5px 2px 5px;
-  	height: 5px;
-  	width: 5px;
-  	background-color: black;
-  	border-radius: 50%;
-  	display: inline-block;
+	height: 5px;
+	width: 5px;
+	background-color: black;
+	border-radius: 50%;
+	display: inline-block;
 }
 
 .elem__text__inter {
@@ -765,10 +765,10 @@ img {vertical-align: middle;}
 }
 
 .header__menu svg {
-    width: 32px;
-    fill: #E0E0E0;
-    float: right;
-    margin-right: 10px;
-    display: none;
-    cursor: pointer;
+	width: 32px;
+	fill: #E0E0E0;
+	float: right;
+	margin-right: 10px;
+	display: none;
+	cursor: pointer;
 }
